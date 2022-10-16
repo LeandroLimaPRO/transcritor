@@ -4,7 +4,7 @@ Api destinada para transcrição de audio, para mais informações ao iniciar v�
 
 ## Dependências
 
-* PARA LINUX INSTALAR DEPENDENCIA apt-get install ffmpeg libavcodec-extra
+* PARA LINUX INSTALAR DEPENDENCIA `apt-get install ffmpeg libavcodec-extra`
 
 * para WINDOWS, COLOCAR CODEC FFMPEG NA RAIZ C: E ADICIONAR A PASTA BIN AO PATHENV DO WINDOWS
 
