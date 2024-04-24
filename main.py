@@ -84,7 +84,7 @@ def pdf_para_texto(nomedoarquivo,save_on_file =False):
                 cd.append(codigo_barra)
         
         pages.append(ptxt)
-    obj['conteudo'] = pages
+    obj['texto'] = pages
     obj['tabelas'] = tabelas
     obj['codigo_barras']= cd
     return obj
@@ -103,7 +103,7 @@ async def create_upload_audio(file: UploadFile = File()):
         shutil.copyfileobj(file.file, buffer)  
     texto = audio_para_texto(name[0])
     if texto != None:
-        return {"filename": file.filename, "texto":texto}
+        return {"filename": file.filename, "conteudo":texto}
     else:
         return {"erro": "Não foi possivel ober texto"}
     
@@ -122,6 +122,6 @@ async def create_upload_pdf(file: UploadFile = File()):
     obj = pdf_para_texto(file_location)
     
     if obj != None:
-        return {"filename": file.filename, "texto": obj}
+        return {"filename": file.filename, "conteudo": obj}
     else:
         return {"erro": "Não foi possivel ober texto"}
